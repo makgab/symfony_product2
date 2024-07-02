@@ -1,0 +1,28 @@
+{# templates/product/edit.html.twig #}
+
+<p>Edit Product</p>
+
+{{ form_start(form) }}
+
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="row">
+        <div class="col">
+            {{ form_row(form.name, {'label':'Név: '} ) }}
+        </div>
+
+        <div class="col">
+            {{ form_row(form.price, {'label':'Ár: '} ) }}
+        </div>
+
+        <div class="col" id="cat-id">
+            {{ form_row(form.categoryid, {'label':'Kategória: '} ) }}
+        </div>
+    </div>
+
+
+{{ form_end(form) }}
+
+<a href="/product">Index</a>

@@ -1,0 +1,24 @@
+{# templates/category/del.html.twig #}
+
+<p>Are you sure to delete Category?</p>
+
+{{ form_start(form) }}
+
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="row">
+        <div class="col" style="opacity: 0.5">
+            {{ form_row(form.category, {'label':'Kategória: '} ) }}
+        </div>
+
+        <div class="col" id="some-custom-id"  style="opacity: 0.5">
+            {{ form_row(form.description, {'label':'Leírás: '} ) }}
+        </div>
+    </div>
+
+
+{{ form_end(form) }}
+
+<a href="/category">Index</a>
